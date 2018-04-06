@@ -1,0 +1,77 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "project": {
+    "name": "biblioteca"
+  },
+  "apps": [
+    {
+      "root": "src",
+      "outDir": "dist",
+      "assets": [
+        "assets",
+        "favicon.ico"
+      ],
+      "index": "index.html",
+      "main": "main.ts",
+      "polyfills": "polyfills.ts",
+      "test": "test.ts",
+      "tsconfig": "tsconfig.app.json",
+      "testTsconfig": "tsconfig.spec.json",
+      "prefix": "bli",
+      "styles": [
+        "assets/phalcon-html/components/reset.css",
+        "assets/phalcon-html/components/site.css",
+        "assets/phalcon-html/components/container.css",
+        "assets/phalcon-html/components/grid.css",
+        "assets/phalcon-html/components/header.css",
+        "assets/phalcon-html/components/image.css",
+        "assets/phalcon-html/components/menu.css",
+        "assets/phalcon-html/components/divider.css",
+        "assets/phalcon-html/components/dropdown.css",
+        "assets/phalcon-html/components/segment.css",
+        "assets/phalcon-html/components/button.css",
+        "assets/phalcon-html/components/list.css",
+        "assets/phalcon-html/components/icon.css",
+        "assets/phalcon-html/components/sidebar.css",
+        "assets/phalcon-html/components/transition.css",
+        "assets/phalcon-html/components/form.css",
+        "assets/phalcon-html/components/table.css",
+        "styles.css"
+      ],
+      "scripts": [],
+      "environmentSource": "environments/environment.ts",
+      "environments": {
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      }
+    }
+  ],
+  "e2e": {
+    "protractor": {
+      "config": "./protractor.conf.js"
+    }
+  },
+  "lint": [
+    {
+      "project": "src/tsconfig.app.json",
+      "exclude": "**/node_modules/**"
+    },
+    {
+      "project": "src/tsconfig.spec.json",
+      "exclude": "**/node_modules/**"
+    },
+    {
+      "project": "e2e/tsconfig.e2e.json",
+      "exclude": "**/node_modules/**"
+    }
+  ],
+  "test": {
+    "karma": {
+      "config": "./karma.conf.js"
+    }
+  },
+  "defaults": {
+    "styleExt": "css",
+    "component": {}
+  }
+}

@@ -1,0 +1,3 @@
+[submodule "bli-rest/treinamento-phalcon"]
+	path = bli-rest/treinamento-phalcon
+	url = https://github.com/AutoAvaliar/treinamento-phalcon
