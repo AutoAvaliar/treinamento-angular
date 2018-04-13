@@ -12,6 +12,7 @@ import { AutoresComponent } from './autores/autores.component';
 import { AutorComponent } from './autores/autor/autor.component'
 import {AutoresService} from './autores/autores.service'
 import {HttpClientModule} from '@angular/common/http'
+import {FormsModule, ReactiveFormsModule} from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import {HttpClientModule} from '@angular/common/http'
     AutorComponent
   ],
   imports: [
-    BrowserModule, RouterModule.forRoot(ROUTES), HttpClientModule
+    BrowserModule, RouterModule.forRoot(ROUTES), HttpClientModule, FormsModule, ReactiveFormsModule
   ],
   providers: [AutoresService],
   bootstrap: [AppComponent]

@@ -2,7 +2,7 @@
     <div class="ui middle aligned stackable grid container">
         <div class="row">
             <div class="left aligned column">
-                <div class="sixteen wide column">
+                <div class="eight wide column">
                     <h3 class="ui header">Autores</h3>
                     <table class="ui compact celled definition table">
                         <thead class="full-width">
@@ -12,12 +12,33 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr bli-autor *ngFor="let autor of autores" [autor]="autor">
-                    </tr>
-
+                            <tr bli-autor *ngFor="let autor of autores" [autor]="autor" [autores]="this">
+                        </tr>
+                        <tr *ngIf="!autores.length">
+                            <td></td>
+                            <td>Nenhum registro encontrado!</td>
+                        </tr>
                     </tbody>
-
                 </table>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="eight wide column">
+            <h3 class="ui header">Cadastro de Autor</h3>
+            <div class="ui form">
+                <form [formGroup]="form" novalidate>
+                    <div class="two fields">
+                        <div class="field">
+                            <label>Nome do autor</label>
+                            <input type="text" placeholder="Nome do autor" name="name" formControlName="nome">
+                        </div>
+
+                    </div>
+                    <div class="ui buttons">
+                        <button type="submit" class="ui positive button" (click)="salvarAutor()">Salvar</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

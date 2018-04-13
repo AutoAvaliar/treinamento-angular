@@ -31,3 +31,17 @@ $app->get('/autores', function () {
     //$data = [['id' => 1, 'nome' => 'André'], ['id' => 2, 'nome' => 'Bruna'], ['id' => 3, 'nome' => 'Carlos']];
     return json_encode($data);
 });
+
+$app->get('/autores/excluir/{id:[0-9]+}', function ($id) {
+    $autorExcluir = new \Tf\Lib\Biblioteca\Autor\AutorExcluir($id);
+    $autorExcluir->executar();
+    $data = $autorExcluir->resultado();
+    return json_encode($data);
+});
+
+$app->post('/autores/salvar', function () {
+    $autorCadastro = new \Tf\Lib\Biblioteca\Autor\AutorCadastro($this->request->getJsonRawBody(true));
+    $autorCadastro->executar();
+    $data = $autorCadastro->resultado();
+    return json_encode($data);
+});

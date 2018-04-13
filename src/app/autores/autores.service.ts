@@ -12,4 +12,14 @@ export class AutoresService {
     buscarAutores(): Observable<Autor[]> {
         return this.http.get<Autor[]>(`${API_URL}/autores`)
     }
+
+    excluirAutor(id: number): Observable<any> {
+        return this.http.get<any>(`${API_URL}/autores/excluir/${id}`)
+    }
+
+    salvarAutor(dados: any): Observable<any> {
+        return this.http.post<any>(`${API_URL}/autores/salvar`, dados)
+    }
+
+
 }
